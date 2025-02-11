@@ -57,7 +57,7 @@
       <div class="hero-content"> 
         <h1>Un univers de citations à découvrir</h1>
         <p>
-          Bienvenue sur Dark Wisdom, une collection de citations inspirantes
+          Bienvenue sur <span style="font-weight:bold; color: #9b59b6;">Dark Wisdom</span>, une collection de citations inspirantes
           tirées de divers univers. Films, séries, animés, littérature,
           philosophie… découvre des mots qui marquent et explore différentes
           thématiques pour trouver l’inspiration.
