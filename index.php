@@ -141,8 +141,35 @@
             </button>
         </div>
         <br><br>
-        <button type="button" class="btn btn-light bouton2" style="align-items:center">Decouvrez ici plus de citations</button>
+        <div class="text-center">
+        <button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button>
+        </div>
     </div>
+    <div class="parallax">
+
+    </div>
+
+
+    <footer class="footer  text-light text-center py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Liens vers les pages principales -->
+      <div class="col-md-6 mb-3">
+        <a href="index.html" class="footer-link">Accueil</a> |
+        <a href="citations.html" class="footer-link">Citations</a> |
+        <a href="favoris.html" class="footer-link">Favoris</a> |
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <!-- Liens vers Mentions Légales & Politique -->
+      <div class="col-md-6 mb-3">
+        <a href="mentions-legales.html" class="footer-link">Mentions Légales</a> |
+        <a href="politique-confidentialite.html" class="footer-link">Politique de Confidentialité</a>
+      </div>
+    </div>
+    <p class="mt-3">© 2025 Dark Wisdom. Tous droits réservés.</p>
+  </div>
+</footer>
+
     <!--------------------------------- JAVASCRIPT -------------------------------------------->
 
     <script
