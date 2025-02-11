@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style_index.css" />
+    <link rel="stylesheet" href="../styles/citations.css" />
   </head>
   <body>
     <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
@@ -24,7 +24,7 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dark Wisdom</a>
+        <a class="navbar-brand" href="../index.html">Dark Wisdom</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -51,105 +51,34 @@
       </div>
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
-    <!---------------------------------  HERO SECTION -------------------------------------------->
-
-    <div class="hero">
-      <div class="hero-content"> 
-        <h1>Un univers de citations à découvrir</h1>
-        <p>
-          Bienvenue sur <span style="font-weight:bold; color: #9b59b6;">Dark Wisdom</span>, une collection de citations inspirantes
-          tirées de divers univers. Films, séries, animés, littérature,
-          philosophie… découvre des mots qui marquent et explore différentes
-          thématiques pour trouver l’inspiration.
-        </p>
-        <button class="btn btn-lg">Explorez les citations</button>
-      </div>
+    <!---------------------------------  Section anime -------------------------------------------->
+    <section class="anime-citations">
+  <h2>✨ Citations mémorables d'Anime ✨</h2>
+  <div class="citation-list">
+    <div class="citation">
+      <p>"Le monde n'est pas parfait. Mais il essaie de l'être, c'est ce qui le rend beau."</p>
+      <span>- Roy Mustang, Fullmetal Alchemist: Brotherhood</span>
     </div>
-    <!--------------------------------- FIN HERO SECTION -------------------------------------------->
-    <!---------------------------------  Transition SECTION -------------------------------------------->
-    <div class="container citations mt-5" data-aos="fade-up" delay= "2000" duration= "1000"> 
-        <h2>Nos citations par thème</h2>
-        <br><br><br>
-        <div id="carouselCitations" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <h3 style="color:white">Citations Cinema &nbsp;&nbsp;<i class="bi bi-film"></i></h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text">"La peur mène à la colère, la colère mène à la haine, la haine mène à la souffrance." </p>
-                                <p class="card-author">— <strong>Maître Yoda</strong>,<i> Star Wars</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text">"Pourquoi tombons-nous ? Pour mieux apprendre à nous relever." </p>
-                                <p class="card-author">— <strong>Alfred Pennyworth</strong>, <i> Batman Begins</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "Ce n’est pas nos aptitudes qui montrent ce que nous sommes, ce sont nos choix."</p>
-                                <p class="card-author">— <strong>Dumbledore</strong>, <i> Harry Potter</i></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <h3 style="color:white">Citations Anime</h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "Un héros n'est pas celui qui ne tombe jamais. C'est celui qui se relève toujours."</p>
-                                <p class="card-author">— <strong>All Might</strong>, <i> My Hero Academia</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "La douleur est inévitable. La souffrance est optionnelle."</p>
-                                <p class="card-author">— <strong>Nagato (Pain)</strong>, <i> Naruto Shippuden</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "Un pouvoir qui ne peut protéger ses amis n'est rien d'autre qu'une faiblesse."</p>
-                                <p class="card-author">— <strong>Erza Scarlet</strong>, <i> Fairy Tail</i></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Boutons de navigation -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCitations" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselCitations" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-        <br><br>
-        <div class="text-center">
-        <button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button>
-        </div>
+    <div class="citation">
+      <p>"La peur n'est pas mauvaise. Elle te dit où sont tes faiblesses. Et une fois que tu connais tes faiblesses, tu peux devenir plus fort et plus gentil."</p>
+      <span>- Gildarts Clive, Fairy Tail</span>
     </div>
-    <div class="parallax">
-
+    <div class="citation">
+      <p>"Pouvoir pleurer, c'est pas une faiblesse. Ça veut juste dire que tu ressens quelque chose."</p>
+      <span>- Edward Elric, Fullmetal Alchemist: Brotherhood</span>
     </div>
+  </div>
+  
+  <!-- Encadré pour la citation aléatoire -->
+  <div class="random-citation-box">
+    <p id="random-citation">Clique sur le bouton pour découvrir une citation en rapport avec les animés !</p>
+    <button onclick="generateRandomCitation()">Nouvelle citation</button>
+  </div>
+</section>
 
+    
+
+    <!---------------------------------  FOOTERRR -------------------------------------------->
 
     <footer class="footer  text-light text-center py-4">
   <div class="container">

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: "Roboto Condensed", serif;
+  overflow-x: hidden;
+}
+/*************************************                     NAVBAR                                   ************************************************/
+.navbar {
+  background-color: rgba(0, 0, 0, 0) !important; /* Noir semi-transparent */
+  backdrop-filter: blur(3px); /* Effet de flou */
+}
+
+.navbar-brand {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.1rem;
+  color: #9b59b6 !important;
+}
+
+.navbar-brand:hover {
+  color: #4a195d !important;
+  font-size: 3.12rem;
+  transition: 0.5s;
+}
+
+.nav-link {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+  color: white;
+}
+
+.nav-link:hover {
+  color: #9b59b6;
+  transition: 1s;
+}
+
+.sp {
+  color: #9b59b6;
+}
+.sp:hover {
+  color: #ffffff;
+}
+/*************************************                     NAVBAR                                   ************************************************/
+.anime-citations {
+  text-align: center;
+  padding: 50px;
+  background-color: #1a1a1a;
+  color: white;
+  background: url("../images/fond_citations.jpg");
+}
+.anime-citations h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  color: #9b59b6;
+  margin-bottom: 20px;
+}
+
+.citation-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.citation {
+  background-color: rgba(155, 89, 182, 0.2);
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #9b59b6;
+  border-radius: 10px;
+}
+
+.citation p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #ddd;
+}
+
+.citation span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #9b59b6;
+}
+
+.random-citation-box {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#random-citation {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.random-citation-box button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.random-citation-box button:hover {
+  background-color: #d574f9;
+}
+/************************************************************           footer           *****************************************************************/
+
+.footer {
+  background: #000000; /* Noir profond */
+  color: #d574f9; /* Violet clair */
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer .footer-link {
+  color: #d574f9; /* Violet */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.footer .footer-link:hover {
+  color: #cf80eed3; /* Violet plus clair */
+  text-decoration: underline;
+}
