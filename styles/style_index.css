@@ -10,7 +10,7 @@ body {
   font-family: "Roboto Condensed", serif;
   overflow-x: hidden;
 }
-
+/*************************************                     NAVBAR                                   ************************************************/
 .navbar {
   background-color: rgba(0, 0, 0, 0) !important; /* Noir semi-transparent */
   backdrop-filter: blur(2px); /* Effet de flou */
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar-brand:hover {
-  color: #cf80eed3 !important;
+  color: #4a195d !important;
   font-size: 3.12rem;
   transition: 0.5s;
 }
@@ -33,10 +33,25 @@ body {
   font-size: 1.7rem;
   color: white;
 }
+
+.nav-link:hover {
+  color: #9b59b6;
+  transition: 1s;
+}
+
+.sp {
+  color: #9b59b6;
+}
+.sp:hover {
+  color: #ffffff;
+}
+/*************************************                     NAVBAR                                   ************************************************/
+/*************************************                     hero section                                   ************************************************/
+
 .hero {
   max-width: 100vw;
   height: 100vh;
-  background: url("https://images.pexels.com/photos/11542516/pexels-photo-11542516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: url("../images/parallax_index.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,6 +98,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   background-color: #9b59b6;
   border: none;
+  color: #ffffff;
   padding: 10px 20px;
   font-size: 1.5rem;
   cursor: pointer;
@@ -107,18 +123,7 @@ body {
     margin-bottom: 70px;
   }
 }
-.carousel-control-prev,
-.carousel-control-next {
-  width: 0px; /* Ajuste la largeur pour éviter qu'ils soient collés aux cartes */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(255, 255, 255, 0.323);
-  color: #000000 !important;
-  border-radius: 50%;
-  padding: 15px; /* Augmente la taille des flèches */
-}
+/*************************************                     hero section                                   ************************************************/
 
 h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -132,6 +137,7 @@ h3 {
   font-size: 2rem;
   text-align: center;
   color: white;
+  padding-bottom: 15px;
 }
 
 .citations {
@@ -162,9 +168,22 @@ h3 {
 .carousel-control-next {
   width: 5%;
 }
+.carousel-control-prev,
+.carousel-control-next {
+  width: 0px; /* Ajuste la largeur pour éviter qu'ils soient collés aux cartes */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.323);
+  color: #000000 !important;
+  border-radius: 50%;
+  padding: 15px; /* Augmente la taille des flèches */
+}
 
 .bouton2 {
   padding: 10px 50px;
+  font-weight: bold;
   margin-bottom: 30px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.2rem;
@@ -179,11 +198,11 @@ h3 {
   padding: 10px 55px;
   transition: 0.5s;
 }
-
+/************************************************************           PARALLAX           *****************************************************************/
 .parallax {
   max-width: 100vw;
   height: 30vh;
-  background: url("https://images.pexels.com/photos/11542516/pexels-photo-11542516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: url("../images/parallax_index.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,6 +222,9 @@ h3 {
   background: rgba(0, 0, 0, 0.718); /* Opacité de 50% */
   z-index: 1;
 }
+
+/************************************************************           footer           *****************************************************************/
+
 .footer {
   background: #000000; /* Noir profond */
   color: #d574f9; /* Violet clair */
