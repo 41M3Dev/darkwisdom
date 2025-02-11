@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style_index.css" />
   </head>
   <body>
@@ -39,12 +40,12 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
-            <li class="nav-item ms-3">
-              <a class="nav-link" href="#"
-                ><i class="bi bi-person-circle"></i
-              ></a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
+            <li class="nav-item"><a class="nav-link sp" href="#">Connexion</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
+            <!-- <li class="nav-item ms-3">
+              <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -66,13 +67,13 @@
     </div>
     <!--------------------------------- FIN HERO SECTION -------------------------------------------->
     <!---------------------------------  Transition SECTION -------------------------------------------->
-    <div class="container citations mt-5">
+    <div class="container citations mt-5" data-aos="fade-up" delay= "2000" duration= "1000"> 
         <h2>Nos citations par thème</h2>
         <br><br><br>
         <div id="carouselCitations" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <h3 style="color:white">Citations Cinema</h2>
+                <h3 style="color:white">Citations Cinema &nbsp;&nbsp;<i class="bi bi-film"></i></h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -102,7 +103,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <h3 style="color:white">Citations Anime</h2>
+                    <h3 style="color:white">Citations Anime</h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -171,11 +172,15 @@
 </footer>
 
     <!--------------------------------- JAVASCRIPT -------------------------------------------->
-
+    <script src="https://kit.fontawesome.com/cd8dd3426c.js" crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
