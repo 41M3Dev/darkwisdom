@@ -57,7 +57,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.79); /* Opacité de 50% */
+  background: rgba(0, 0, 0, 0.718); /* Opacité de 50% */
   z-index: 1;
 }
 
@@ -161,4 +161,68 @@ h3 {
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
+}
+
+.bouton2 {
+  padding: 10px 50px;
+  margin-bottom: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  color: #9b59b6 !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.bouton2:hover {
+  background-color: #9b59b6 !important;
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  padding: 10px 55px;
+  transition: 0.5s;
+}
+
+.parallax {
+  max-width: 100vw;
+  height: 30vh;
+  background: url("https://images.pexels.com/photos/11542516/pexels-photo-11542516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(150, 50, 200, 0.5);
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+  background: rgba(0, 0, 0, 0.718); /* Opacité de 50% */
+  z-index: 1;
+}
+.footer {
+  background: #000000; /* Noir profond */
+  color: #d574f9; /* Violet clair */
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer .footer-link {
+  color: #d574f9; /* Violet */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.footer .footer-link:hover {
+  color: #cf80eed3; /* Violet plus clair */
+  text-decoration: underline;
 }
