@@ -17,14 +17,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/profil.css" />
   </head>
-  <body class="body_profil">
+  <body>
     <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
     <nav
       class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Dark Wisdom</a>
+        <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,9 +38,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Mes Favoris</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#favoris">Mes Favoris</a></li>
             <li class="nav-item"><a class="nav-link sp" href="#">Deconnexion</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
             <!-- <li class="nav-item ms-3">
@@ -52,78 +52,129 @@
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
     <!---------------------------------  Section Titre  -------------------------------------------->
-
+<section class="profil_section">
     <div class="container cont-profil">
-    <!-- Section Profil -->
-    <div class="row">
-        <div class="col-md-6 mx-auto" >
-            <div class="profile-card p-4">
-                <h3 class="text-center">Profil</h3>
-                <form id="profileForm">
-                    <div class="mb-3">
-                        <label class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" value="Dupont" >
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" value="Jean"  >
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Pseudo</label>
-                        <input type="text" class="form-control" id="pseudo" value="JeanD"  >
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" value="jean.dupont@email.com"  >
-                    </div>
-                    <button type="submit" id="saveBtn" class="btn btn-purple w-100 mt-2">Enregistrer</button>
-                </form>
+        <!-- Section Profil -->
+        <div class="row">
+            <div class="col-md-6 mx-auto" >
+                <div class="profile-card p-4">
+                    <h3 class="text-center">Profil</h3>
+                    <form id="profileForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" value="Dupont" >
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" value="Jean"  >
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pseudo</label>
+                            <input type="text" class="form-control" id="pseudo" value="JeanD"  >
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="jean.dupont@email.com"  >
+                        </div>
+                        <button type="submit" id="saveBtn" class="btn btn-purple w-100 mt-2">Enregistrer</button >
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Section Favoris -->
-    <div class="container mt-5">
-    <div class="favorites-card p-4">
-        <h3 class="text-center">📜 Citations Favoris</h3>
+        <!-- Section Favoris -->
+        <div id="favoris" class="container mt-5 contfav"  >
+        <h2 class="text-center mb-4">⭐ Citations Favorites</h2>
 
-        <div class="favorite-container">
-            <div class="favorite-scroll">
-
-                <div class="favorite-card">
+        <!-- Films -->
+        <div class="theme-section">
+            <h3>🎬 Films</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
                     <p>« L’espoir est une chose dangereuse. L’espoir peut rendre un homme fou. »</p>
                     <small>- Stephen King, *Les Évadés (1994)*</small>
-                    <button class="btn btn-danger remove-btn">🛒 Retirer</button>
+                    <br>
+                    <button class="btn btn-danger remove-btn">Retirer</button>
                 </div>
 
-                <div class="favorite-card">
+                <div class="quote-card">
                     <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
                     <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
-                    <button class="btn btn-danger remove-btn">🛒 Retirer</button>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
+                </div>
+                <div class="quote-card">
+                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
+                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
+                </div>
+                <div class="quote-card">
+                    <p>« L’espoir est une chose dangereuse. L’espoir peut rendre un homme fou. »</p>
+                    <small>- Stephen King, *Les Évadés (1994)*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn">Retirer</button>
                 </div>
 
-                <div class="favorite-card">
-                    <p>« Ne pleurez pas parce que c’est fini. Souriez parce que c’est arrivé. »</p>
-                    <small>- Dr. Seuss</small>
-                    <button class="btn btn-danger remove-btn">🛒 Retirer</button>
+                <div class="quote-card">
+                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
+                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
+                </div>
+                <div class="quote-card">
+                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
+                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anime -->
+        <div class="theme-section">
+            <h3>🎌 Anime</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <p>« La douleur est éphémère, l’abandon est éternel. »</p>
+                    <small>- One Piece, *Monkey D. Luffy*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
                 </div>
 
-                <div class="favorite-card">
-                    <p>« La peur mène à la colère, la colère mène à la haine, la haine mène à la souffrance. »</p>
-                    <small>- Yoda, *Star Wars*</small>
-                    <button class="btn btn-danger remove-btn">🛒 Retirer</button>
+                <div class="quote-card">
+                    <p>« La peur n’est pas le mal. Elle te dit juste quelle est ta véritable faiblesse. »</p>
+                    <small>- Fullmetal Alchemist, *Edward Elric*</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poésie -->
+        <div class="theme-section">
+            <h3>📖 Poésie</h3>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <p>« Je suis d’un pays qui fut envahi sept fois, mais où une femme seule peut sortir la nuit. »</p>
+                    <small>- Mahmoud Darwish</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
                 </div>
 
-                <div class="favorite-card">
-                    <p>« Hakuna Matata, ça veut dire pas de soucis. »</p>
-                    <small>- Le Roi Lion</small>
-                    <button class="btn btn-danger remove-btn">🛒 Retirer</button>
+                <div class="quote-card">
+                    <p>« Ce que tu cherches te cherche. »</p>
+                    <small>- Rumi</small>
+                    <br>
+                    <button class="btn btn-danger remove-btn"> Retirer</button>
                 </div>
-
             </div>
         </div>
     </div>
-</div>
+</section>
+    
+
+
     <!---------------------------------  FOOTERRR -------------------------------------------->
 
     <footer class="footer  text-light text-center py-4">
