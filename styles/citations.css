@@ -195,7 +195,35 @@ body {
 .favorite-btn.active {
   color: red;
 }
+/* Scrollbar pour Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
+/* Fond de la scrollbar */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Fond sombre pour rester dans ton thème */
+  border-radius: 10px;
+}
+
+/* Barre de défilement */
+::-webkit-scrollbar-thumb {
+  background: #9b59b6; /* Violet pour correspondre à tes cards */
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Effet au survol */
+::-webkit-scrollbar-thumb:hover {
+  background: #ba68c8; /* Un violet plus clair au survol */
+}
+
+/* Scrollbar pour Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9b59b6 rgba(0, 0, 0, 0.2);
+}
 /*************************************                     CITATIONS                                   ************************************************/
 /*************************************                     CITATIONS                                   ************************************************/
 /* Section Parallax */
