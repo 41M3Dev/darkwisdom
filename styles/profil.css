@@ -127,14 +127,23 @@ body {
 }
 
 /* Titres */
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+  padding: 20px 20px;
+}
 h2 {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
+  font-size: 3rem;
   color: #ba68c8;
   padding: 20px 20px;
 }
 
 h3 {
+  font-size: 2rem;
   font-family: "Bebas Neue", sans-serif;
   padding: 20px 20px 10px 10px;
   text-align: center;

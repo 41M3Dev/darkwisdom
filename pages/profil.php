@@ -41,7 +41,7 @@
             <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
             <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li>
             <li class="nav-item"><a class="nav-link" href="#favoris">Mes Favoris</a></li>
-            <li class="nav-item"><a class="nav-link sp" href="#">Deconnexion</a></li>
+            <li class="nav-item"><a class="nav-link sp" href="#">Déconnexion</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
             <!-- <li class="nav-item ms-3">
               <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-6 mx-auto" >
                 <div class="profile-card p-4">
-                    <h3 class="text-center">Profil</h3>
+                    <h1 class="text-center">Mon Profil</h1>
                     <form id="profileForm">
                         <div class="mb-3">
                             <label class="form-label">Nom</label>
@@ -76,7 +76,7 @@
                             <label class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" value="jean.dupont@email.com"  >
                         </div>
-                        <button type="submit" id="saveBtn" class="btn btn-purple w-100 mt-2">Enregistrer</button >
+                        <button type="submit" id="saveBtn" class="btn btn-light w-100 mt-2">Enregistrer</button >
                     </form>
                 </div>
             </div>
