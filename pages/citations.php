@@ -52,28 +52,127 @@
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
     <!---------------------------------  Section anime -------------------------------------------->
-    <section class="anime-citations">
-  <h2>✨ Citations mémorables d'Anime ✨</h2>
-  <div class="citation-list">
-    <div class="citation">
-      <p>"Le monde n'est pas parfait. Mais il essaie de l'être, c'est ce qui le rend beau."</p>
-      <span>- Roy Mustang, Fullmetal Alchemist: Brotherhood</span>
-    </div>
-    <div class="citation">
-      <p>"La peur n'est pas mauvaise. Elle te dit où sont tes faiblesses. Et une fois que tu connais tes faiblesses, tu peux devenir plus fort et plus gentil."</p>
-      <span>- Gildarts Clive, Fairy Tail</span>
-    </div>
-    <div class="citation">
-      <p>"Pouvoir pleurer, c'est pas une faiblesse. Ça veut juste dire que tu ressens quelque chose."</p>
-      <span>- Edward Elric, Fullmetal Alchemist: Brotherhood</span>
-    </div>
+  <section class="section-citations">
+    <div class="anime-citations">
+    <div class="container">
+    <h2 class="text-center text-light mb-4">✨ Citations mémorables d'Anime ✨</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Carte 1 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Le monde n'est pas parfait. Mais il essaie de l'être, c'est ce qui le rend beau."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Roy Mustang, Fullmetal Alchemist: Brotherhood</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"La peur n'est pas mauvaise. Elle te dit où sont tes faiblesses. Et une fois que tu connais tes faiblesses, tu peux devenir plus fort et plus gentil."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Gildarts Clive, Fairy Tail</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Pouvoir pleurer, c'est pas une faiblesse. Ça veut juste dire que tu ressens quelque chose."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Edward Elric, Fullmetal Alchemist: Brotherhood</small>
+              </div>
+            </div>
+          </div>
+                <!-- Carte 4 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Le pouvoir n'est pas déterminé par votre taille, mais par la taille de votre cœur et de vos rêves."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Monkey D. Luffy, One Piece</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 5 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"La douleur est inévitable. La souffrance est optionnelle."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Nagato (Pain), Naruto Shippuden</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 6 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Tu dois accepter ta propre destinée si tu veux la changer."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Lelouch Lamperouge, Code Geass</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 7 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Un héros n'est pas celui qui n'a jamais peur, mais celui qui affronte sa peur et continue d'avancer."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Izuku Midoriya, My Hero Academia</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 8 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"Les puissants protègent les faibles. C'est ainsi que le monde devrait fonctionner."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Erwin Smith, Attack on Titan</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 9 -->
+          <div class="col">
+            <div class="card bg-dark text-light shadow-lg h-100">
+              <div class="card-body">
+                <p class="card-text">"C'est seulement lorsque nous risquons de perdre tout ce que nous avons que nous réalisons ce qui compte vraiment."</p>
+              </div>
+              <div class="card-footer border-light text-end">
+                <small class="fw-bold">- Sebastian Michaelis, Black Butler</small>
+              </div>
+            </div>
+          </div>
+          <!-- Encadré pour la citation aléatoire -->
+      </div>
+    <!-- Boîte de citation aléatoire -->
+          <div class="random-citation-box">
+            <p id="random-citation">Clique sur le bouton pour découvrir une citation en rapport avec les animés !</p>
+            <button>Nouvelle citation</button>
+          </div>
   </div>
-  
-  <!-- Encadré pour la citation aléatoire -->
-  <div class="random-citation-box">
-    <p id="random-citation">Clique sur le bouton pour découvrir une citation en rapport avec les animés !</p>
-    <button onclick="generateRandomCitation()">Nouvelle citation</button>
-  </div>
+  <br><br><br><br>
 </section>
 
     
