@@ -46,6 +46,10 @@ body {
   color: #ffffff;
 }
 /*************************************                     NAVBAR                                   ************************************************/
+/*************************************                     CITATIONS                                   ************************************************/
+/*************************************                     CITATIONS                                   ************************************************/
+/*************************************                     CITATIONS                                   ************************************************/
+
 .citation-section {
   position: relative;
   width: 100%;
@@ -58,13 +62,23 @@ body {
   color: white;
 }
 
-h1 {
+.h1_citations {
   color: #9b59b6;
   font-family: "Bebas Neue", sans-serif;
 }
 
-p {
+.p_citations {
   font-size: 1.3rem;
+}
+
+.h2citations {
+  color: #9b59b6 !important;
+  font-family: "Bebas Neue", sans-serif !important;
+  padding-bottom: 18px;
+}
+
+.favorite-btn.active {
+  color: rgb(132, 0, 180); /* Change le cœur en rouge */
 }
 
 .background-media {
@@ -93,51 +107,48 @@ p {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .background-media {
-    display: none;
-  }
-  .mobile-only {
-    display: block;
-  }
-  h1 {
-    padding-top: 20px;
-    font-size: 2.5rem;
-    color: #9b59b6;
-    font-family: "Bebas Neue", sans-serif;
-  }
-  p {
-    font-size: 1.2rem;
-  }
-}
-
 .anime-section {
   padding: 40px 0;
   text-align: center;
 }
 
 .anime-card {
+  background: rgba(156, 89, 182, 0.371);
+  border: 2px solid #9b59b6;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  border-radius: 10px;
+  height: 220px; /* Taille fixe */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.anime-card .card-content {
+  overflow-y: auto; /* Scroll interne si le texte dépasse */
+  max-height: 120px;
+  padding-right: 5px; /* Pour éviter la superposition avec la barre de défilement */
 }
 
 .anime-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(155, 89, 182, 0.5);
 }
 
 .quote-card {
   text-align: center;
-  background: #ffffff;
+  background: #9c59b67d;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
   margin-top: 20px;
+  box-shadow: 0px 5px 15px rgba(155, 89, 182, 0.5);
 }
 
 .generate-btn {
-  background: #ff5733;
+  background: #9b59b6;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -148,7 +159,60 @@ p {
 }
 
 .generate-btn:hover {
-  background: #c70039;
+  background: #6c3483;
+}
+@media (max-width: 768px) {
+  .background-media {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .h1_citations {
+    padding-top: 20px;
+    font-size: 2.5rem;
+    color: #9b59b6;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .p_citations {
+    font-size: 1.2rem;
+  }
+}
+
+/* Style du bouton favori */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+.favorite-btn.active {
+  color: red;
+}
+
+/*************************************                     CITATIONS                                   ************************************************/
+/*************************************                     CITATIONS                                   ************************************************/
+/* Section Parallax */
+.parallax1 {
+  background-image: url("../images/parallax_cit.jpg");
+  height: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 /************************************************************           footer           *****************************************************************/
 
