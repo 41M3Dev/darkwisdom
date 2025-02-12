@@ -51,131 +51,97 @@
       </div>
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
-    <!---------------------------------  Section anime -------------------------------------------->
-  <section class="section-citations">
-    <div class="anime-citations">
-    <div class="container">
-    <h2 class="text-center text-light mb-4">✨ Citations mémorables d'Anime ✨</h2>
+    <!---------------------------------  Section Titre  -------------------------------------------->
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <!-- Carte 1 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Le monde n'est pas parfait. Mais il essaie de l'être, c'est ce qui le rend beau."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Roy Mustang, Fullmetal Alchemist: Brotherhood</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 2 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"La peur n'est pas mauvaise. Elle te dit où sont tes faiblesses. Et une fois que tu connais tes faiblesses, tu peux devenir plus fort et plus gentil."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Gildarts Clive, Fairy Tail</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 3 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Pouvoir pleurer, c'est pas une faiblesse. Ça veut juste dire que tu ressens quelque chose."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Edward Elric, Fullmetal Alchemist: Brotherhood</small>
-              </div>
-            </div>
-          </div>
-                <!-- Carte 4 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Le pouvoir n'est pas déterminé par votre taille, mais par la taille de votre cœur et de vos rêves."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Monkey D. Luffy, One Piece</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 5 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"La douleur est inévitable. La souffrance est optionnelle."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Nagato (Pain), Naruto Shippuden</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 6 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Tu dois accepter ta propre destinée si tu veux la changer."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Lelouch Lamperouge, Code Geass</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 7 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Un héros n'est pas celui qui n'a jamais peur, mais celui qui affronte sa peur et continue d'avancer."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Izuku Midoriya, My Hero Academia</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 8 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"Les puissants protègent les faibles. C'est ainsi que le monde devrait fonctionner."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Erwin Smith, Attack on Titan</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte 9 -->
-          <div class="col">
-            <div class="card bg-dark text-light shadow-lg h-100">
-              <div class="card-body">
-                <p class="card-text">"C'est seulement lorsque nous risquons de perdre tout ce que nous avons que nous réalisons ce qui compte vraiment."</p>
-              </div>
-              <div class="card-footer border-light text-end">
-                <small class="fw-bold">- Sebastian Michaelis, Black Butler</small>
-              </div>
-            </div>
-          </div>
-          <!-- Encadré pour la citation aléatoire -->
-      </div>
-    <!-- Boîte de citation aléatoire -->
-          <div class="random-citation-box">
-            <p id="random-citation">Clique sur le bouton pour découvrir une citation en rapport avec les animés !</p>
-            <button>Nouvelle citation</button>
-          </div>
-  </div>
-  <br><br><br><br>
+<section class="citation-section">
+    <div class="overlay">
+        <h1 style="padding-top: 80px">Découvrez des citations inspirantes</h1>
+        <p>Plongez dans un monde de pensées profondes, avec des citations sur l’amour, la sagesse, la motivation et bien plus encore.</p>
+    </div>
+    <video class="background-media" autoplay muted loop playsinline>
+        <source src="../images/title_citation.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos.
+    </video>
+    <img src="../images/fond_citations.jpg" alt="Image de fond" class="background-media mobile-only">
 </section>
+<!---------------------------------  Section Anime  -------------------------------------------->
+<section class="anime-section">
+        <h2>✨ Citations Inspirantes d'Anime ✨</h2>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Naruto Uzumaki</h5>
+                        <p class="card-text">"Échouer, c'est la preuve qu'on a essayé."</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Luffy</h5>
+                        <p class="card-text">"Je ne veux pas conquérir quoi que ce soit, je veux être libre."</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Goku</h5>
+                        <p class="card-text">"Le pouvoir vient en réponse à un besoin, pas à un désir."</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Levi Ackerman</h5>
+                        <p class="card-text">"Les décisions, bonnes ou mauvaises, ne sont jamais simples à prendre."</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Itachi Uchiha</h5>
+                        <p class="card-text">"La vie n’a de valeur que si elle est vécue pour quelqu’un d’autre."</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Edward Elric</h5>
+                        <p class="card-text">"Un cœur brisé peut toujours se réparer tant qu'il bat encore."</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Gojo Satoru</h5>
+                        <p class="card-text">"Ne crains pas l’échec, mais crains de ne pas essayer."</p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Kakashi Hatake</h5>
+                        <p class="card-text">"Ceux qui enfreignent les règles sont des déchets... Mais ceux qui abandonnent leurs amis sont pires."</p>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="col-md-4">
+                    <div class="card anime-card p-3">
+                        <h5 class="card-title">Shoto Todoroki</h5>
+                        <p class="card-text">"Ne laisse pas le passé décider de ton avenir."</p>
+                    </div>
+                </div>
+            </div>
 
-    
+            <!-- Carte centrale avec bouton -->
+            <div class="quote-card mt-4">
+                <h4>🌀 Générer une Citation d'Anime</h4>
+                <p class="generated-quote">Cliquez sur le bouton pour découvrir une nouvelle citation !</p>
+                <button class="generate-btn">🎲 Nouvelle Citation</button>
+            </div>
+        </div>
+    </section>
 
     <!---------------------------------  FOOTERRR -------------------------------------------->
 
