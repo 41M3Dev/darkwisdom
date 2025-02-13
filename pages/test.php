@@ -173,8 +173,14 @@
             <!-- Carte centrale avec bouton -->
             <div class="quote-card mt-4">
                 <h4>🌀 Générer une Citation d'Anime</h4>
-                <p class="quoteanime">Cliquez sur le bouton pour découvrir une nouvelle citation !</p>
-                <button class="generate-btn btn-anime" onclick="sentence()" aria-hidden="true">🎲 Nouvelle Citation</button>
+                <br>
+                <h5 class="card-title titleanime">E.E. Cummings</h5>
+                <br>
+                        <div class="card-content">
+                            <p class="p_citations quoteanime">"Le plus grand des exploits, c'est d'être soi-même dans un monde qui tente constamment de vous changer."</p>
+                        </div>
+                        <small class="sourceanime">Fight Club (1999)</small> <br><br>
+                        <button class="generate-btn btn-anime" onclick="sentence()" aria-hidden="true">🎲 Nouvelle Citation</button>
             </div>
         </div>
     </section>

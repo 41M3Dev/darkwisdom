@@ -170,6 +170,8 @@ const poesie = [
 // Sélection des éléments HTML
 const phraseanime = document.querySelector(".quoteanime");
 const buttonanime = document.querySelector(".btn-anime");
+const sourceAnime = document.querySelector(".sourceanime");
+const titleAnime = document.querySelector(".titleanime");
 
 const phrasefilm = document.querySelector(".quotefilm");
 const buttonfilm = document.querySelector(".btn-film");
@@ -181,8 +183,11 @@ const buttonPoesie = document.querySelector(".btn-poesie");
 function RandomQuoteanime() {
   const randomIndex = Math.floor(Math.random() * animes.length);
   const selectedQuote = animes[randomIndex];
+  console.log(selectedQuote.source);
 
-  phraseanime.innerHTML = `"${selectedQuote.citation}" - <strong>${selectedQuote.auteur}</strong> (${selectedQuote.source})`;
+  phraseanime.innerHTML = `"${selectedQuote.citation}"`;
+  sourceAnime.innerHTML = -`<strong>${selectedQuote.source}`;
+  titleAnime.innerHTML = `</strong> (${selectedQuote.auteur})`;
 }
 
 function RandomQuotefilm() {
