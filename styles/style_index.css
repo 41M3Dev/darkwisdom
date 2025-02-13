@@ -112,17 +112,29 @@ body {
     backdrop-filter: blur(10px); /* Effet de flou */
   }
 
+  .hero-content {
+    padding-top: 305px;
+    padding-bottom: 160px;
+  }
+
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     margin-right: 50px;
     margin-left: 20px;
   }
 
   .hero p {
-    font-size: 1.3rem; /* Augmente la taille */
+    font-size: 1.1rem; /* Augmente la taille */
     margin-right: 30px;
     margin-left: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+  }
+  .hero button {
+    padding: 8px 10px;
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
   }
 }
 /*************************************                     hero section                                   ************************************************/
@@ -249,4 +261,26 @@ h3 {
 .footer .footer-link:hover {
   color: #cf80eed3; /* Violet plus clair */
   text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .card-author {
+    font-size: 0.9rem;
+  }
+  .bouton2 {
+    padding: 8px 10px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
 }
