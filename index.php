@@ -38,8 +38,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
             <li class="nav-item"><a class="nav-link sp" href="#">Connexion</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
