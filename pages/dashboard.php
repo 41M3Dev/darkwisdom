@@ -71,10 +71,20 @@
             <div class="col-md-6 mx-auto" >
                 <div class="profile-card p-4">
                     <h1 class="text-center">Mon Profil</h1>
-                    <?php if (isset($_SESSION['success']) && $_SESSION['success']): ?>
-                    <p style="color: green; text-align: center;">Modification réussie !</p>
-                    <?php unset($_SESSION['success']); ?> 
-                <?php endif; ?>
+                    <?php if (isset($_SESSION['success_message'])): ?>
+                        <div id="alert-message" class="alert alert-success text-center">
+                            <?= $_SESSION['success_message']; ?>
+                        </div>
+                        <?php unset($_SESSION['success_message']); ?>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['error_message'])): ?>
+                        <div id="alert-message" class="alert alert-danger text-center">
+                            <?= $_SESSION['error_message']; ?>
+                        </div>
+                        <?php unset($_SESSION['error_message']); ?>
+                    <?php endif; ?>
+
                 <form action="../function/modifier_profil.php" method="POST">   
                      <?php include '../function/get_profil.php'; ?>
                         <div class="mb-3">
@@ -108,7 +118,9 @@
 
                 <!-- Message de confirmation -->
                 <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
-                    <div class="success-message" style="color:green; font-weight: bold; margin-bottom:10px;">Citation ajoutée avec succès !</div>
+                    <div id="success-message" class="success-message" style="color:green; font-weight: bold; margin-bottom:10px;">
+                        Citation ajoutée avec succès !
+                    </div>
                 <?php endif; ?>
 
                 <!-- Formulaire d'ajout -->
@@ -216,6 +228,7 @@
     </script>
 
 
+<!--++++++++++++++++++++++ SCRIPT POUR ENLEVER LES CARD -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".remove-btn").forEach(button => {
@@ -242,6 +255,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+<!-- SCRIPT POUR FAIRE DISPARAITRE LE MESSAGE -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let alertBox = document.getElementById("alert-message");
+        if (alertBox) {
+            setTimeout(function () {
+                alertBox.style.transition = "opacity 0.5s ease";
+                alertBox.style.opacity = "0";
+                setTimeout(() => alertBox.remove(), 500); // Supprime complètement après l'animation
+            }, 3000); // 5 secondes avant de disparaître
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let successMessage = document.getElementById("success-message");
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.style.transition = "opacity 0.5s ease";
+                successMessage.style.opacity = "0";
+                setTimeout(() => successMessage.remove(), 500); // Supprime après l'animation
+            }, 5000); // Cache après 5 secondes
+        }
+    });
+</script>
 
 
   </body>
