@@ -24,7 +24,7 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dark Wisdom</a>
+        <a class="navbar-brand" href="index.php">Dark Wisdom</a>
         <button
           class="navbar-toggler"
           type="button"
