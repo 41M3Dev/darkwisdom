@@ -172,9 +172,8 @@
 
             <!-- Carte centrale avec bouton -->
             <div class="quote-card mt-4">
-                <h4>🎌 Générer une Citation d'Anime</h4><br>
-                <h5 class="card-title titleanime">Goku</h5>
-                <br>
+                <h4 style="font-family:Bebas Neue, sans-serif; font-size:2rem;">🎌 Générer une Citation d'Anime</h4><br>
+                <h5 class="card-title titleanime" style="padding-bottom:20px">Goku</h5>
                     <div class="card-content">
                         <p class="p_citations quoteanime">"Ce n’est pas la puissance qui compte, mais la volonté de ne jamais abandonner."</p>
                     </div>
@@ -294,9 +293,8 @@
                 </div>
             </div>
             <div class="quote-card mt-4">
-                <h4>🎬 Générer une Citation de Film</h4><br>
-                <h5 class="card-title titleFilm">Hubert</h5>
-                <br>
+                <h4 style="font-family:Bebas Neue, sans-serif; font-size:2rem;">🎬 Générer une Citation de Film</h4><br>
+                <h5 class="card-title titleFilm" style="padding-bottom:20px">Hubert</h5>
                     <div class="card-content">
                         <p class="p_citations quotefilm">"Jusqu'ici tout va bien... L'important, c'est pas la chute, c'est l'atterrissage."</p>
                     </div>
@@ -416,9 +414,8 @@
                 </div>
             </div>
             <div class="quote-card mt-4">
-                <h4>📜 Générer une Citation de Film</h4><br>
-                <h5 class="card-title titlePoesie">  Victor Hugo </h5>
-                <br>
+                <h4 >📜 Générer une Citation de Poesie</h4><br>
+                <h5 class="card-title titlePoesie" style="padding-bottom:20px">  Victor Hugo </h5>
                     <div class="card-content">
                         <p class="p_citations quotepoesie">"Demain, dès l’aube, à l’heure où blanchit la campagne, Je partirai."</p>
                     </div>
