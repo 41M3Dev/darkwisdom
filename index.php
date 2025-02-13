@@ -38,8 +38,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Citations</a></li> <?php
+            <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li> <?php
               // Démarrer la session si ce n'est pas déjà fait
               if (session_status() === PHP_SESSION_NONE) {
                   session_start();
@@ -47,16 +47,16 @@
               // Vérifier si l'utilisateur est connecté
               if (isset($_SESSION['user_id'])) {
                   // Si l'utilisateur est connecté
-                  echo '<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
+                  echo '<li class="nav-item"><a class="nav-link" href="pages/profil.php">Favoris</a></li>
                         <li class="nav-item"><a class="nav-link" href="pages/logout.php">Déconnexion</a></li>
                           <li class="nav-item ms-3">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
+                  <a class="nav-link" href="pages/profil.php"><i class="fa-regular fa-user"></i></a>
                 </li>';
               } else {
                   // Si l'utilisateur n'est pas connecté
                   echo '
-                <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
-                <li class="nav-item"><a class="nav-link sp" href="login.php">Connexion</a></li>';
+                <li class="nav-item"><a class="nav-link" href="pages/register.php">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link sp" href="pages/login.php">Connexion</a></li>';
               }
               ?>
           </ul>
