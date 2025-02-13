@@ -16,6 +16,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/profil.css" />
+    <?php include '../function/dashboardBack.php'?>
   </head>
   <body>
     <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
@@ -83,138 +84,80 @@
         </div>
 
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="form-citation-container">
-        <div class="form-citation-card">
-            <h2 class="form-citation-title">Ajouter une Citation</h2>
-            <form action="#" method="POST">
-                <!-- Citation -->
-                <div class="form-group">
-                    <label for="citation" class="form-label">Citation :</label>
-                    <textarea class="form-input" id="citation" name="citation" rows="4" required></textarea>
-                </div>
+        <div class="form-citation-container">
+            <div class="form-citation-card">
+                <h2 class="form-citation-title">Ajouter une Citation</h2>
 
-                <!-- Auteur -->
-                <div class="form-group">
-                    <label for="auteur" class="form-label">Auteur :</label>
-                    <input type="text" class="form-input" id="auteur" name="auteur" required>
-                </div>
+                <!-- Message de confirmation -->
+                <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+                    <div class="success-message" style="color:green; font-weight: bold; margin-bottom:10px;">Citation ajoutée avec succès !</div>
+                <?php endif; ?>
 
-                <!-- Source (optionnelle) -->
-                <div class="form-group">
-                    <label for="source" class="form-label">Source (optionnelle) :</label>
-                    <input type="text" class="form-input" id="source" name="source">
-                </div>
+                <!-- Formulaire d'ajout -->
+                <form action="ajouter_citation.php" method="POST">
+                    <!-- Citation -->
+                    <div class="form-group">
+                        <label for="citation" class="form-label">Citation :</label>
+                        <textarea class="form-input" id="citation" name="citation" rows="4" required></textarea>
+                    </div>
 
-                <!-- Thème -->
-                <div class="form-group">
-                    <label for="theme" class="form-label">Thème :</label>
-                    <select class="form-input" id="theme" name="theme" required>
-                        <option value="film">Film</option>
-                        <option value="anime">Anime</option>
-                        <option value="poesie">Poésie</option>
-                    </select>
-                </div>
+                    <!-- Auteur -->
+                    <div class="form-group">
+                        <label for="auteur" class="form-label">Auteur :</label>
+                        <input type="text" class="form-input" id="auteur" name="auteur" required>
+                    </div>
 
-                <!-- Champ caché pour l'ID utilisateur -->
-                <input type="hidden" name="utilisateurs_id" value="">
+                    <!-- Source (optionnelle) -->
+                    <div class="form-group">
+                        <label for="source" class="form-label">Source (optionnelle) :</label>
+                        <input type="text" class="form-input" id="source" name="source">
+                    </div>
 
-                <!-- Bouton d'envoi -->
-                <button type="submit" class="form-submit-btn">Ajouter</button>
-            </form>
+                    <!-- Thème -->
+                    <div class="form-group">
+                        <label for="theme" class="form-label">Thème :</label>
+                        <select class="form-input" id="theme" name="theme" required>
+                            <option value="film">Film</option>
+                            <option value="anime">Anime</option>
+                            <option value="poesie">Poésie</option>
+                        </select>
+                    </div>
+
+                    <!-- Champ caché pour l'ID utilisateur -->
+                    <input type="hidden" name="utilisateurs_id" value="<?php echo $_SESSION['user_id'] ?? ''; ?>">
+
+                    <!-- Bouton d'envoi -->
+                    <button type="submit" class="form-submit-btn">Ajouter</button>
+                </form>
+            </div>
         </div>
     </div>
+
+
+        <!-- Section suppression -->
+<div id="favoris" class="container mt-5 contfav">
+    <h2 class="text-center mb-4">Supprimer des Citations</h2>
+
+    <!-- Films -->
+    <?php foreach ($citations as $theme => $quotes): ?> <!-- Correction ici -->
+    <div class="theme-section">
+    <div id="message" style="display: none; color: green; text-align: center;"></div>
+        <h3>🎬 <?= htmlspecialchars($theme) ?></h3>
+        <div class="quote-grid">
+        <?php foreach ($quotes as $quote): ?>
+            <div class="quote-card">
+                <p><?= htmlspecialchars($quote['citation']) ?></p>
+                <small>- <?= htmlspecialchars($quote['auteur']) ?> <?= $quote['source'] ? ', ' . htmlspecialchars($quote['source']) : '' ?></small>
+                <br>
+                <button class="btn btn-danger remove-btn" data-id="<?= $quote['id'] ?>">Retirer</button>
+
+            </div>
+        <?php endforeach; ?>
+        </div>
+    </div>
+    <?php endforeach; ?>
 </div>
 
-
-        <!-- Section supression -->
-        <div id="favoris" class="container mt-5 contfav"  >
-        <h2 class="text-center mb-4">Supprimer des Citations</h2>
-
-        <!-- Films -->
-        <div class="theme-section">
-            <h3>🎬 Films</h3>
-            <div class="quote-grid">
-                <div class="quote-card">
-                    <p>« L’espoir est une chose dangereuse. L’espoir peut rendre un homme fou. »</p>
-                    <small>- Stephen King, *Les Évadés (1994)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn">Retirer</button>
-                </div>
-
-                <div class="quote-card">
-                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
-                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-                <div class="quote-card">
-                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
-                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-                <div class="quote-card">
-                    <p>« L’espoir est une chose dangereuse. L’espoir peut rendre un homme fou. »</p>
-                    <small>- Stephen King, *Les Évadés (1994)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn">Retirer</button>
-                </div>
-
-                <div class="quote-card">
-                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
-                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-                <div class="quote-card">
-                    <p>« Ce ne sont pas nos aptitudes qui montrent ce que nous sommes. Ce sont nos choix. »</p>
-                    <small>- J.K. Rowling, *Harry Potter et la Chambre des Secrets (2002)*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Anime -->
-        <div class="theme-section">
-            <h3>🎌 Anime</h3>
-            <div class="quote-grid">
-                <div class="quote-card">
-                    <p>« La douleur est éphémère, l’abandon est éternel. »</p>
-                    <small>- One Piece, *Monkey D. Luffy*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-
-                <div class="quote-card">
-                    <p>« La peur n’est pas le mal. Elle te dit juste quelle est ta véritable faiblesse. »</p>
-                    <small>- Fullmetal Alchemist, *Edward Elric*</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Poésie -->
-        <div class="theme-section">
-            <h3>📖 Poésie</h3>
-            <div class="quote-grid">
-                <div class="quote-card">
-                    <p>« Je suis d’un pays qui fut envahi sept fois, mais où une femme seule peut sortir la nuit. »</p>
-                    <small>- Mahmoud Darwish</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-
-                <div class="quote-card">
-                    <p>« Ce que tu cherches te cherche. »</p>
-                    <small>- Rumi</small>
-                    <br>
-                    <button class="btn btn-danger remove-btn"> Retirer</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
     
 
@@ -253,23 +196,35 @@
     <script>
       AOS.init();
     </script>
-    <script>document.addEventListener("DOMContentLoaded", function () {
-    const favoriteButtons = document.querySelectorAll(".favorite-btn");
 
-    favoriteButtons.forEach(button => {
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".remove-btn").forEach(button => {
         button.addEventListener("click", function () {
-            this.classList.toggle("active");
+            const citationId = this.getAttribute("data-id");
+
+            if (!citationId) return;
+
+            // if (confirm("Voulez-vous vraiment supprimer cette citation ?")) {
+            //     fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
+            //         .then(() => {
+            //             location.reload(); // Recharge la page après suppression
+            //         })
+            //         .catch(error => console.error("Erreur :", error));
+            // }
+            fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
+                .then(() => {
+                    location.reload(); // Recharge la page après suppression
+                })
+                .catch(error => console.error("Erreur :", error));
         });
     });
 });
 
-
-// pour enlever une CITATION
-document.querySelectorAll(".remove-btn").forEach(button => {
-    button.addEventListener("click", function() {
-        this.parentElement.remove(); // Supprime la carte parente
-    });
-});
 </script>
+
+
+
   </body>
 </html>
