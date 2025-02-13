@@ -4,10 +4,9 @@ $user = "root";
 $password = "";
 $database = "darkwisdom";
 
-// Connexion à la base de données
+
 $conn = new mysqli($host, $user, $password, $database);
 
-// Vérifier la connexion
 if ($conn->connect_error) {
     die("Erreur de connexion à la base de données.");
 }
@@ -32,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt->close();
 
             // Redirection avec un message de succès
-            header("Location: formulaire.php?success=1");
+            header("Location: ../pages/dashboard.php?success=1");
             exit();
         }
     }

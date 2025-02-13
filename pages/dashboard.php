@@ -40,17 +40,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li>
-            <a class="nav-link" href="pages/profil.php"><i class="fa-regular fa-user"></i></a>
-            <a class="nav-link sp" href="pages/profil.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>
-            <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
-            <!-- <li class="nav-item ms-3">
-              <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
-            </li> -->
+            <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li> <?php
+              // Démarrer la session si ce n'est pas déjà fait
+              if (session_status() === PHP_SESSION_NONE) {
+                  session_start();
+              }
+              // Vérifier si l'utilisateur est connecté
+              if (isset($_SESSION['user_id'])) {
+                  // Si l'utilisateur est connecté
+                  echo '<a class="nav-link" href="dashboard.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+              } else {
+                  // Si l'utilisateur n'est pas connecté
+                  echo '
+                <li class="nav-item"><a class="nav-link" href="register.php">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link sp" href="login.php">Connexion</a></li>';
+              }
+              ?>
           </ul>
         </div>
       </div>
     </nav>
+
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
     <!---------------------------------  Section Titre  -------------------------------------------->
 <section class="profil_section">
@@ -60,28 +71,35 @@
             <div class="col-md-6 mx-auto" >
                 <div class="profile-card p-4">
                     <h1 class="text-center">Mon Profil</h1>
-                    <form id="profileForm">
+                    <?php if (isset($_SESSION['success']) && $_SESSION['success']): ?>
+                    <p style="color: green; text-align: center;">Modification réussie !</p>
+                    <?php unset($_SESSION['success']); ?> 
+                <?php endif; ?>
+                <form action="../function/modifier_profil.php" method="POST">   
+                     <?php include '../function/get_profil.php'; ?>
                         <div class="mb-3">
                             <label class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="nom" value="Dupont" >
+                            <input type="text" class="form-control" name="nom" value="<?= htmlspecialchars($user['nom']) ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" value="Jean"  >
+                            <input type="text" class="form-control" name="prenom" value="<?= htmlspecialchars($user['prenom']) ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Pseudo</label>
-                            <input type="text" class="form-control" id="pseudo" value="JeanD"  >
-                        </div>
+                            <input type="text" class="form-control" name="pseudo" value="<?= htmlspecialchars($user['pseudo']) ?>" required>
+                            </div>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" value="jean.dupont@email.com"  >
+                            <input type="email" class="form-control" name="mail" value="<?= htmlspecialchars($user['mail']) ?>" required>
                         </div>
-                        <button type="submit" id="saveBtn" class="btn btn-light w-100 mt-2">Enregistrer</button >
+                        <button type="submit" class="btn btn-light w-100 mt-2">Enregistrer</button>
                     </form>
                 </div>
             </div>
         </div>
+
+
 
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="form-citation-container">
@@ -94,7 +112,7 @@
                 <?php endif; ?>
 
                 <!-- Formulaire d'ajout -->
-                <form action="ajouter_citation.php" method="POST">
+                <form action="../function/ajouter_citation.php" method="POST">
                     <!-- Citation -->
                     <div class="form-group">
                         <label for="citation" class="form-label">Citation :</label>
@@ -117,9 +135,9 @@
                     <div class="form-group">
                         <label for="theme" class="form-label">Thème :</label>
                         <select class="form-input" id="theme" name="theme" required>
-                            <option value="film">Film</option>
-                            <option value="anime">Anime</option>
-                            <option value="poesie">Poésie</option>
+                            <option value="Film">Film</option>
+                            <option value="Anime">Anime</option>
+                            <option value="Poésie">Poésie</option>
                         </select>
                     </div>
 
