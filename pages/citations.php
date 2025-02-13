@@ -24,7 +24,7 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Dark Wisdom</a>
+        <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,8 +38,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
             <li class="nav-item"><a class="nav-link sp" href="#">Connexion</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
@@ -56,7 +56,7 @@
 <section class="citation-section">
     <div class="overlay">
         <h1 class="h1_citations" style="padding-top: 80px">Découvrez des citations inspirantes</h1>
-        <p class="p_citations">Plongez dans un monde de pensées profondes, avec des citations sur l’amour, la sagesse, la motivation et bien plus encore.</p>
+        <p class="p_citations">Plongez dans un monde de pensées profondes, avec des citations sur les animés, les  et bien plus encore.</p>
     </div>
     <video class="background-media" autoplay muted loop playsinline>
         <source src="../images/title_citation.mp4" type="video/mp4">
@@ -172,9 +172,13 @@
 
             <!-- Carte centrale avec bouton -->
             <div class="quote-card mt-4">
-                <h4>🌀 Générer une Citation d'Anime</h4>
-                <p class="generated-quote">Cliquez sur le bouton pour découvrir une nouvelle citation !</p>
-                <button class="generate-btn">🎲 Nouvelle Citation</button>
+                <h4 style="font-family:Bebas Neue, sans-serif; font-size:2rem;">🎌 Générer une Citation d'Anime</h4><br>
+                <h5 class="card-title titleanime" style="padding-bottom:20px">Goku</h5>
+                    <div class="card-content">
+                        <p class="p_citations quoteanime">"Ce n’est pas la puissance qui compte, mais la volonté de ne jamais abandonner."</p>
+                    </div>
+                    <small class="sourceanime">- Dragon Ball Z</small> <br><br>
+                <button class="generate-btn btn-anime">🎲 Nouvelle Citation</button>
             </div>
         </div>
     </section>
@@ -288,12 +292,14 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Carte centrale avec bouton -->
             <div class="quote-card mt-4">
-                <h4>🌀 Générer une Citation de Film</h4>
-                <p class="generated-quote">Cliquez sur le bouton pour découvrir une nouvelle citation !</p>
-                <button class="generate-btn">🎲 Nouvelle Citation</button>
+                <h4 style="font-family:Bebas Neue, sans-serif; font-size:2rem;">🎬 Générer une Citation de Film</h4><br>
+                <h5 class="card-title titleFilm" style="padding-bottom:20px">Hubert</h5>
+                    <div class="card-content">
+                        <p class="p_citations quotefilm">"Jusqu'ici tout va bien... L'important, c'est pas la chute, c'est l'atterrissage."</p>
+                    </div>
+                    <small class="sourceFilm">- La Haine</small> <br><br>
+                <button class="generate-btn btn-film">🎲 Nouvelle Citation</button>
             </div>
         </div>
     </section>
@@ -407,12 +413,14 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Carte centrale avec bouton -->
             <div class="quote-card mt-4">
-                <h4>🌀 Générer une Citation de Poésies</h4>
-                <p class="generated-quote">Cliquez sur le bouton pour découvrir une nouvelle citation !</p>
-                <button class="generate-btn">🎲 Nouvelle Citation</button>
+                <h4 >📜 Générer une Citation de Poesie</h4><br>
+                <h5 class="card-title titlePoesie" style="padding-bottom:20px">  Victor Hugo </h5>
+                    <div class="card-content">
+                        <p class="p_citations quotepoesie">"Demain, dès l’aube, à l’heure où blanchit la campagne, Je partirai."</p>
+                    </div>
+                    <small class="sourcePoesie">- Demain, dès l’aube</small> <br><br>
+                <button class="generate-btn btn-poesie">🎲 Nouvelle Citation</button>
             </div>
         </div>
     </section>
@@ -442,6 +450,7 @@
 </footer>
 
     <!--------------------------------- JAVASCRIPT -------------------------------------------->
+    <script src="../script/citations.js"></script>
     <script src="https://kit.fontawesome.com/cd8dd3426c.js" crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -452,15 +461,7 @@
     <script>
       AOS.init();
     </script>
-    <script>document.addEventListener("DOMContentLoaded", function () {
-    const favoriteButtons = document.querySelectorAll(".favorite-btn");
-
-    favoriteButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            this.classList.toggle("active");
-        });
-    });
-});
+    <script>
 </script>
   </body>
 </html>
