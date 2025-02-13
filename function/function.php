@@ -1,9 +1,9 @@
 <?php
 session_start();
 require_once 'function.php';
-function inscriptionCitoyen(): string
+function inscriptionUtilisateur(): string
 {
-    $sql_user = "";
+    $sql_user = "INSERT INTO `utilisateurs`(`nom`, `prenom`, `pseudo`, `mot_de_passe`,`roles`, `mail`) VALUES (?,?,?,?,?,?)";
     return $sql_user;
 }
 function getTypeIncident(): string{

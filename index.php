@@ -24,7 +24,7 @@
       data-bs-theme="dark"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Dark Wisdom</a>
+        <a class="navbar-brand" href="#">Dark Wisdom</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,14 +38,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
-            <li class="nav-item"><a class="nav-link sp" href="#">Connexion</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#">Favoris</a></li> -->
-            <!-- <li class="nav-item ms-3">
-              <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
-            </li> -->
+            <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li> <?php
+              // Démarrer la session si ce n'est pas déjà fait
+              if (session_status() === PHP_SESSION_NONE) {
+                  session_start();
+              }
+              // Vérifier si l'utilisateur est connecté
+              if (isset($_SESSION['user_id'])) {
+                  // Si l'utilisateur est connecté
+                  echo '<li class="nav-item"><a class="nav-link" href="pages/profil.php">Favoris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/logout.php">Déconnexion</a></li>
+                          <li class="nav-item ms-3">
+                  <a class="nav-link" href="pages/profil.php"><i class="fa-regular fa-user"></i></a>
+                </li>';
+              } else {
+                  // Si l'utilisateur n'est pas connecté
+                  echo '
+                <li class="nav-item"><a class="nav-link" href="pages/register.php">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link sp" href="pages/login.php">Connexion</a></li>';
+              }
+              ?>
           </ul>
         </div>
       </div>
@@ -73,7 +86,7 @@
         <div id="carouselCitations" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <h3 style="color:white">Citations Film &nbsp;&nbsp;🎬</h3>
+                <h3 style="color:white">Citations Cinema &nbsp;&nbsp;<i class="bi bi-film"></i></h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -103,7 +116,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <h3 style="color:white">Citations Anime&nbsp;&nbsp; 🎌</h3>
+                    <h3 style="color:white">Citations Anime</h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -131,36 +144,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <h3 style="color:white">Citations Poésie &nbsp;&nbsp;📜</h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "J’ai gravé ton nom sur le sable, il a été effacé. Sur le marbre, il s’est brisé. Dans mon cœur, il restera à jamais."</p>
-                                <p class="card-author">— <strong>Paul Éluard</strong>, <i> Le Phénix</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "Il y a des silences qui en disent long, et des absences qui en disent trop."</p>
-                                <p class="card-author">— <strong>Alfred de Musset</strong>, <i> Poésies nouvelles</i></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card custom-card">
-                                <div class="card-body">
-                                <p class="card-text"> "Où que l’homme habite, il est en exil."</p>
-                                <p class="card-author">— <strong>Charles Baudelaire</strong>, <i> Les Fleurs du mal</i></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
             </div>
 
             <!-- Boutons de navigation -->
@@ -173,7 +156,7 @@
         </div>
         <br><br>
         <div class="text-center">
-        <a href="pages/citations.php"><button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button></a>
+        <button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button>
         </div>
     </div>
     <div class="parallax">
