@@ -73,7 +73,7 @@
         <div id="carouselCitations" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <h3 style="color:white">Citations Cinema &nbsp;&nbsp;<i class="bi bi-film"></i></h3>
+                <h3 style="color:white">Citations Film &nbsp;&nbsp;🎬</h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <h3 style="color:white">Citations Anime</h3>
+                    <h3 style="color:white">Citations Anime&nbsp;&nbsp; 🎌</h3>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card custom-card">
@@ -131,6 +131,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <h3 style="color:white">Citations Poésie &nbsp;&nbsp;📜</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card custom-card">
+                                <div class="card-body">
+                                <p class="card-text"> "J’ai gravé ton nom sur le sable, il a été effacé. Sur le marbre, il s’est brisé. Dans mon cœur, il restera à jamais."</p>
+                                <p class="card-author">— <strong>Paul Éluard</strong>, <i> Le Phénix</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card custom-card">
+                                <div class="card-body">
+                                <p class="card-text"> "Il y a des silences qui en disent long, et des absences qui en disent trop."</p>
+                                <p class="card-author">— <strong>Alfred de Musset</strong>, <i> Poésies nouvelles</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card custom-card">
+                                <div class="card-body">
+                                <p class="card-text"> "Où que l’homme habite, il est en exil."</p>
+                                <p class="card-author">— <strong>Charles Baudelaire</strong>, <i> Les Fleurs du mal</i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
             </div>
 
             <!-- Boutons de navigation -->
@@ -143,7 +173,7 @@
         </div>
         <br><br>
         <div class="text-center">
-        <button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button>
+        <a href="pages/citations.php"><button type="button" class="btn btn-light bouton2">Decouvrez ici plus de citations</button></a>
         </div>
     </div>
     <div class="parallax">
