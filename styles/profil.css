@@ -201,3 +201,96 @@ small {
   display: block;
   margin-bottom: 12px; /* Ajoute de l'espace sous le texte */
 }
+
+/************************************************************           dashboard           *****************************************************************/
+/* Conteneur principal du formulaire */
+.form-citation-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Carte du formulaire */
+.form-citation-card {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background: rgba(156, 89, 182, 0.396);
+  border-radius: 10px;
+  border: 1px solid #9b59b6;
+  padding: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre du formulaire */
+.form-citation-title {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Groupe de formulaire */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Champs de saisie */
+/* Appliquer le même style que les autres inputs */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  color: white;
+  border: 1px solid #9b59b6;
+}
+
+/* Spécifiquement pour le menu déroulant */
+.form-input select {
+  background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  color: white;
+  appearance: none; /* Supprime le style par défaut */
+  padding: 10px;
+}
+
+/* Modifier la couleur du texte des options */
+.form-input option {
+  background: #000; /* Fond noir pour les options */
+  color: white; /* Texte blanc */
+}
+
+/* Focus sur les inputs */
+.form-input:focus {
+  outline: none;
+  border: 2px solid #ba68c8;
+  box-shadow: 0 0 10px #9b59b6;
+}
+
+/* Bouton d'envoi */
+.form-submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Effet hover sur le bouton */
+.form-submit-btn:hover {
+  background: #fff;
+  color: #9b59b6;
+}
