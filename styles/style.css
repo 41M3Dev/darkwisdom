@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 
 body {
     background-image: url("../images/fondLogin.jpeg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Vibur', cursive;
-    font-family: 'Abel', sans-serif;
-    opacity: .95;
+    color: white;
+    font-family: "Roboto Condensed", serif;
+    overflow-x: hidden;
 }
+
+
 /*************************************                     NAVBAR                                   ************************************************/
 .navbar {
     background-color: rgba(0, 0, 0, 0) !important; /* Noir semi-transparent */
@@ -48,6 +46,16 @@ body {
 }
 .sp:hover {
     color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important; /* Noir semi-transparent */
+        backdrop-filter: blur(10px); /* Effet de flou */
+    }
+    .nav-link {
+        font-size: 1.5rem;
+    }
 }
 /*************************************                     NAVBAR                                   ************************************************/
 /*************************************                     Connexion                                   ************************************************/
@@ -87,7 +95,6 @@ form .con {
 
 .con header h2 {
     font-size: 250%;
-    font-family: 'Playfair Display', serif;
     color: #ffffff;
 }
 
@@ -144,7 +151,7 @@ input:focus {
     border-radius: 5px;
 }
 
-button {
+.log-in {
     display: inline-block;
     color: #252537;
     width: 280px;
@@ -187,7 +194,7 @@ button:hover .btn {
     background: #bc78d9;
 }
 
-button:hover {
+.bnt-login:hover {
     animation: ani9 0.4s ease-in-out infinite alternate;
 }
 
@@ -293,22 +300,6 @@ input:focus {
     border-radius: 5px;
 }
 
-button {
-    display: inline-block;
-    color: #252537;
-    width: 280px;
-    height: 50px;
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s linear;
-    margin: 7% auto;
-    letter-spacing: 0.05em;
-}
 
 .submits {
     width: 48%;
@@ -349,3 +340,4 @@ button:hover {
     }
 }
 /*************************************                     Fin Inscription                                   ************************************************/
+

@@ -1,8 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
-}
 
 body{
         background-image: url("../images/fondLogin.jpeg");
@@ -323,3 +320,36 @@ section {
 }
 /*************************************                     Fin Inscription                                   ************************************************/
 
+
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important; /* Noir semi-transparent */
+        backdrop-filter: blur(10px); /* Effet de flou */
+    }
+
+    .hero-content {
+        padding-top: 305px;
+        padding-bottom: 160px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+        margin-right: 50px;
+        margin-left: 20px;
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Augmente la taille */
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    .hero button {
+        padding: 8px 10px;
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        font-size: 1.5rem;
+    }
+}
