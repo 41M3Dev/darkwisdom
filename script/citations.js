@@ -175,9 +175,13 @@ const titleAnime = document.querySelector(".titleanime");
 
 const phrasefilm = document.querySelector(".quotefilm");
 const buttonfilm = document.querySelector(".btn-film");
+const sourceFilm = document.querySelector(".sourceFilm");
+const titleFilm = document.querySelector(".titleFilm");
 
 const phrasePoesie = document.querySelector(".quotepoesie");
 const buttonPoesie = document.querySelector(".btn-poesie");
+const sourcePoesie = document.querySelector(".sourcePoesie");
+const titlePoesie = document.querySelector(".titlePoesie");
 
 // Fonctions pour générer une citation aléatoire
 function RandomQuoteanime() {
@@ -186,22 +190,26 @@ function RandomQuoteanime() {
   console.log(selectedQuote.source);
 
   phraseanime.innerHTML = `"${selectedQuote.citation}"`;
-  sourceAnime.innerHTML = -`<strong>${selectedQuote.source}`;
-  titleAnime.innerHTML = `</strong> (${selectedQuote.auteur})`;
+  sourceAnime.innerHTML = `- ${selectedQuote.source}`;
+  titleAnime.innerHTML = `<strong>${selectedQuote.auteur}</strong>`;
 }
 
 function RandomQuotefilm() {
   const randomIndex = Math.floor(Math.random() * films.length);
   const selectedQuote = films[randomIndex];
 
-  phrasefilm.innerHTML = `"${selectedQuote.citation}" - <strong>${selectedQuote.auteur}</strong> (${selectedQuote.source})`;
+  phrasefilm.innerHTML = `"${selectedQuote.citation}"`;
+  sourceFilm.innerHTML = `- ${selectedQuote.source}`;
+  titleFilm.innerHTML = `<strong>${selectedQuote.auteur}</strong>`;
 }
 
 function RandomQuotePoesie() {
   const randomIndex = Math.floor(Math.random() * poesie.length);
   const selectedQuote = poesie[randomIndex];
 
-  phrasePoesie.innerHTML = `"${selectedQuote.citation}" - <strong>${selectedQuote.auteur}</strong> (${selectedQuote.source})`;
+  phrasePoesie.innerHTML = `"${selectedQuote.citation}"`;
+  sourcePoesie.innerHTML = `- ${selectedQuote.source}`;
+  titlePoesie.innerHTML = `<strong>${selectedQuote.auteur}</strong>`;
 }
 
 // événement au clic
