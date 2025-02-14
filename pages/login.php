@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['user_id'] = $user['id'];
                             $_SESSION['username'] = $user['nom'];
                             $_SESSION['pseudo'] = $user['prenom'];
+                            $_SESSION['roles'] = $user['roles'];
                             $error = "Connexion réussi!!!";
                             header('Location: ../index.php');
                             exit();

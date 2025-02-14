@@ -1,3 +1,11 @@
+<?php
+session_start();
+ if ($_SESSION['roles'] == 'utilisateur') {
+     header('location:../index.php');
+     exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -46,9 +54,14 @@
                   session_start();
               }
               // Vérifier si l'utilisateur est connecté
-              if (isset($_SESSION['user_id'])) {
+              if (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'admin') {
                   // Si l'utilisateur est connecté
-                  echo '<a class="nav-link" href="dashboard.php"><i class="fa-regular fa-user"></i></a>
+                  echo '<a class="nav-link" href="dashboard.php#dashboard">Dashboard</a>
+                        <a class="nav-link" href="dashboard.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+              } elseif (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'utilisateur') {
+                  echo '<a class="nav-link" href="profil.php#favoris">Favoris</a>
+                        <a class="nav-link" href="profil.php"><i class="fa-regular fa-user"></i></a>
                         <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
               } else {
                   // Si l'utilisateur n'est pas connecté
@@ -112,7 +125,7 @@
 
 
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="form-citation-container">
+        <div id="dashboard" class="form-citation-container">
             <div class="form-citation-card">
                 <h2 class="form-citation-title">Ajouter une Citation</h2>
 

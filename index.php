@@ -20,48 +20,50 @@
   <body>
     <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
     <nav
-      class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark"
-      data-bs-theme="dark"
+            class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark"
+            data-bs-theme="dark"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dark Wisdom</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li> <?php
-              // Démarrer la session si ce n'est pas déjà fait
-              if (session_status() === PHP_SESSION_NONE) {
-                  session_start();
-              }
-              // Vérifier si l'utilisateur est connecté
-              if (isset($_SESSION['user_id'])) {
-                  // Si l'utilisateur est connecté
-                  echo '<li class="nav-item"><a class="nav-link" href="pages/profil.php">Favoris</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/logout.php">Déconnexion</a></li>
-                          <li class="nav-item ms-3">
-                  <a class="nav-link" href="pages/profil.php"><i class="fa-regular fa-user"></i></a>
-                </li>';
-              } else {
-                  // Si l'utilisateur n'est pas connecté
-                  echo '
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li> <?php
+                    // Démarrer la session si ce n'est pas déjà fait
+                    if (session_status() === PHP_SESSION_NONE) {
+                        session_start();
+                    }
+                    // Vérifier si l'utilisateur est connecté
+                    if (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'admin') {
+                        // Si l'utilisateur est connecté
+                        echo '<a class="nav-link" href="pages/dashboard.php#dashboard">Dashboard</a>
+                        <a class="nav-link" href="pages/dashboard.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="pages/logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+                    } elseif (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'utilisateur') {
+                        echo '<a class="nav-link" href="pages/profil.php#favoris">Favoris</a>
+                        <a class="nav-link" href="pages/profil.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="pages/logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+                    } else {
+                        // Si l'utilisateur n'est pas connecté
+                        echo '
                 <li class="nav-item"><a class="nav-link" href="pages/register.php">Inscription</a></li>
                 <li class="nav-item"><a class="nav-link sp" href="pages/login.php">Connexion</a></li>';
-              }
-              ?>
-          </ul>
+                    }
+                    ?>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
     <!---------------------------------  HERO SECTION -------------------------------------------->

@@ -111,7 +111,7 @@ if (isset($_SESSION['user_id'])) {
         data-bs-theme="dark"
 >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dark Wisdom</a>
+        <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
         <button
                 class="navbar-toggler"
                 type="button"
@@ -125,24 +125,26 @@ if (isset($_SESSION['user_id'])) {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
-                <?php
-                // Démarrer la session si ce n\est pas déjà fait
+                <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li> <?php
+                // Démarrer la session si ce n'est pas déjà fait
                 if (session_status() === PHP_SESSION_NONE) {
                     session_start();
                 }
-                // Vérifier si l\utilisateur est connecté
-                if (isset($_SESSION['user_id'])) {
+                // Vérifier si l'utilisateur est connecté
+                if (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'admin') {
                     // Si l'utilisateur est connecté
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
-                          <li class="nav-item ms-3">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
-                </li>';
+                    echo '<a class="nav-link" href="dashboard.php#dashboard">Dashboard</a>
+                        <a class="nav-link" href="dashboard.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+                } elseif (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'utilisateur') {
+                    echo '<a class="nav-link" href="profil.php#favoris">Favoris</a>
+                        <a class="nav-link" href="profil.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
                 } else {
                     // Si l'utilisateur n'est pas connecté
                     echo '
-                <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.php">Inscription</a></li>
                 <li class="nav-item"><a class="nav-link sp" href="login.php">Connexion</a></li>';
                 }
                 ?>
