@@ -1,0 +1,59 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb\" name=\"Changes\" comment=\"FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/citations.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/citations.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/styles/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/styles/style.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/styles/style_register.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/styles/style_register.css\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"feature/connexion\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitLabMergeRequestFiltersHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPENED&quot;,\r\n    &quot;assignee&quot;: {\r\n      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,\r\n      &quot;username&quot;: &quot;41M3Dev&quot;,\r\n      &quot;fullname&quot;: &quot;41M3Dev&quot;\r\n    }\r\n  }\r\n}</component>\r\n  <component name=\"GitLabMergeRequestsSettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;first&quot;: &quot;https://gitlab.com/41M3Dev/web-citation.git&quot;,\r\n    &quot;second&quot;: &quot;9cb59f12-271c-472e-aafc-2b0d28ddca8b&quot;\r\n  }\r\n}</component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"C:\\xampp\\php\\php.exe\" />\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2stbaDNZaQxKyJN5MKO1SgDMyNn\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"feature/inscription\",\r\n    \"last_opened_file_path\": \"C:/xampp/htdocs/projetNeed/Dark Wisdom\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202\" />\r\n        <option value=\"bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb\" name=\"Changes\" comment=\"\" />\r\n      <created>1739277880033</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1739277880033</updated>\r\n      <workItem from=\"1739277881549\" duration=\"9159000\" />\r\n      <workItem from=\"1739348678188\" duration=\"14710000\" />\r\n      <workItem from=\"1739434327686\" duration=\"3360000\" />\r\n      <workItem from=\"1739440723917\" duration=\"6602000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"FEAT : &#10;Tout la mise en place de la fonction connexion + le front\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739352468045</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739352468045</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"FEAT : &#10;Rajout des photo\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739354335483</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739354335483</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"FEAT : &#10;avec le pull de la merge\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739356819019</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739356819019</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"FEAT : &#10;Fonction Inscription et mise en place des redirection\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739443953197</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739443953197</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739444239268</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739444239268</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739450234896</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739450234897</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"FEAT : &#10;Tout la mise en place de la fonction connexion + le front\" />\r\n    <MESSAGE value=\"FEAT : &#10;Rajout des photo\" />\r\n    <MESSAGE value=\"FEAT : &#10;avec le pull de la merge\" />\r\n    <MESSAGE value=\"FEAT : &#10;Fonction Inscription et mise en place des redirection\" />\r\n    <MESSAGE value=\"FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 731b04f80756e81d0392bcfc1474414ecd5ed93a)
++++ b/.idea/workspace.xml	(date 1739459201284)
+@@ -4,11 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb" name="Changes" comment="FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop">
++    <list default="true" id="a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb" name="Changes" comment="FIX :&#10;responsive du header">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/citations.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/citations.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/styles/style_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style_register.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -84,7 +81,7 @@
+       <workItem from="1739277881549" duration="9159000" />
+       <workItem from="1739348678188" duration="14710000" />
+       <workItem from="1739434327686" duration="3360000" />
+-      <workItem from="1739440723917" duration="6602000" />
++      <workItem from="1739440723917" duration="9343000" />
+     </task>
+     <task id="LOCAL-00001" summary="FEAT : &#10;Tout la mise en place de la fonction connexion + le front">
+       <option name="closed" value="true" />
+@@ -134,7 +131,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1739450234897</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="FIX :&#10;responsive du header">
++      <option name="closed" value="true" />
++      <created>1739456234240</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1739456234240</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -146,6 +151,7 @@
+     <MESSAGE value="FEAT : &#10;avec le pull de la merge" />
+     <MESSAGE value="FEAT : &#10;Fonction Inscription et mise en place des redirection" />
+     <MESSAGE value="FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop" />
+-    <option name="LAST_COMMIT_MESSAGE" value="FEAT : &#10;Fonction Inscription et mise en place des redirection + pull de develop" />
++    <MESSAGE value="FIX :&#10;responsive du header" />
++    <option name="LAST_COMMIT_MESSAGE" value="FIX :&#10;responsive du header" />
+   </component>
+ </project>
+\ No newline at end of file

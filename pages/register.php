@@ -2,7 +2,6 @@
 global $pdo;
 require_once '../function/function.php';
 require_once '../function/config.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST["nom"]) && !empty($_POST["prenom"]) && !empty($_POST["pwd"]) && !empty($_POST["pwdR"])
         && !empty($_POST["pseudo"]) && !empty($_POST["mail"]) ) {
@@ -15,31 +14,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             if ($pwd == $pwdR) {
                 $pwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-                    try {
-                        $sql_i = inscriptionUtilisateur();
-                        $pdo->prepare($sql_i)->execute([$nom, $prenom, $pseudo, $pwd,"utilisateur",$mail]);
-                        $error = "Inscription réussi !!";
-                    }
-                    catch (PDOException $e) {
-                        echo $e->getMessage();
-
-                        // Déterminer le champ en conflit
-                        if ($e->getCode() == 23000) {
-                            if (str_contains($e->getMessage(), 'pseudo_UNIQUE')) {
-                                $error = "Le numéro de téléphone est déjà utilisé sur un  autre compte";
-                            } elseif (str_contains($e->getMessage(), 'mail')) {
-                                $error = "Adresse email déjà utilisée.";
-                            }elseif(str_contains($e->getMessage(), 'mdp')) {
-                                $error = "Le mot de passe est incorrect.";
-                            }
+                try {
+                    $sql_i = inscriptionUtilisateur();
+                    $pdo->prepare($sql_i)->execute([$nom, $prenom, $pseudo, $pwd,"utilisateur",$mail]);
+                    $error = "Inscription réussi !!";
+                }
+                catch (PDOException $e) {
+                    // Déterminer le champ en conflit
+                    if ($e->getCode() == 23000) {
+                        if (str_contains($e->getMessage(), 'pseudo_UNIQUE')) {
+                            $error = "Le numéro de téléphone est déjà utilisé sur un  autre compte";
+                        } elseif (str_contains($e->getMessage(), 'mail')) {
+                            $error = "Adresse email déjà utilisée.";
+                        }elseif(str_contains($e->getMessage(), 'mdp')) {
+                            $error = "Le mot de passe est incorrect.";
                         }
                     }
+                    echo $e->getMessage();
+                }
             }
         }
     }
 }
-
 ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -77,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "non";
     }
 }
-
 ?>
 <?php
 // Démarrer la session si ce n'est pas déjà fait
@@ -91,7 +86,6 @@ if (isset($_SESSION['user_id'])) {
     exit();
 } else {
 ?>
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -107,7 +101,8 @@ if (isset($_SESSION['user_id'])) {
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />    <link rel="stylesheet" href="../styles/style_register.css">
+    />
+    <link rel="stylesheet" href="../styles/style_register.css">
 </head>
 <body>
 <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
@@ -116,7 +111,7 @@ if (isset($_SESSION['user_id'])) {
         data-bs-theme="dark"
 >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dark Wisdom</a>
+        <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
         <button
                 class="navbar-toggler"
                 type="button"
@@ -130,24 +125,26 @@ if (isset($_SESSION['user_id'])) {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Citations</a></li>
-                <?php
-                // Démarrer la session si ce n\est pas déjà fait
+                <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="citations.php">Citations</a></li> <?php
+                // Démarrer la session si ce n'est pas déjà fait
                 if (session_status() === PHP_SESSION_NONE) {
                     session_start();
                 }
-                // Vérifier si l\utilisateur est connecté
-                if (isset($_SESSION['user_id'])) {
+                // Vérifier si l'utilisateur est connecté
+                if (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'admin') {
                     // Si l'utilisateur est connecté
-                    echo '<li class="nav-item"><a class="nav-link" href="#">Favoris</a></li>
-                          <li class="nav-item ms-3">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
-                </li>';
+                    echo '<a class="nav-link" href="dashboard.php#dashboard">Dashboard</a>
+                        <a class="nav-link" href="dashboard.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
+                } elseif (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'utilisateur') {
+                    echo '<a class="nav-link" href="profil.php#favoris">Favoris</a>
+                        <a class="nav-link" href="profil.php"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link sp" href="logout.php" label="déconnexion"><i class="bi bi-box-arrow-right"></i></a>';
                 } else {
                     // Si l'utilisateur n'est pas connecté
                     echo '
-                <li class="nav-item"><a class="nav-link" href="#">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.php">Inscription</a></li>
                 <li class="nav-item"><a class="nav-link sp" href="login.php">Connexion</a></li>';
                 }
                 ?>
