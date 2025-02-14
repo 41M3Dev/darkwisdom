@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /dashmin.php
+Disallow:/profil.php
+Allow: /
+
+Sitemap: https://www.darkwisdomet.com/sitemap.xml
