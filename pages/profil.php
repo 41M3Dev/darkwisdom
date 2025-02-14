@@ -172,11 +172,7 @@
         </div>
     </div>
 </section>
-    
-
-
-    <!---------------------------------  FOOTERRR -------------------------------------------->
-
+    <!---------------------------------  FOOTER -------------------------------------------->
     <footer class="footer  text-light text-center py-4">
   <div class="container">
     <div class="row">

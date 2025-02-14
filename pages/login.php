@@ -1,9 +1,5 @@
 <?php
 require_once '../function/function.php';
-require_once '../function/config.php';
-
-
-
     global $pdo;
 ?>
 <?php
@@ -37,12 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             catch (PDOException $e) {
                 echo $e->getMessage();
             }
-
-    }else{
-        $error = "non";
     }
 }
-
 ?>
 <?php
 // Démarrer la session si ce n'est pas déjà fait
@@ -105,8 +97,6 @@ echo '
     </div>
 </nav>
 <!--------------------------------- FIN NAVBAR -------------------------------------------->
-
-
 <div class="overlay">
     <form method="POST" action="#">
         <div class="con">
@@ -123,7 +113,6 @@ echo '
                 <span class="input-item">
         <i class="fa fa-key"></i>
        </span>
-
                 <input class="form-input" type="password" placeholder="Mot de passe" id="pwd"  name="pwd" required>
                 <span>
         <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
@@ -147,7 +136,6 @@ echo '
         </div>
     </form>
 </div> ';}?>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../script/index.js"></script>
 </body>

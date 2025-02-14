@@ -220,7 +220,7 @@ buttonPoesie.addEventListener("click", RandomQuotePoesie);
 /////////////favoris
 document.addEventListener("DOMContentLoaded", function () {
   const favoriteButtons = document.querySelectorAll(".favorite-btn");
-
+  console.log('ok');
   favoriteButtons.forEach((button) => {
     button.addEventListener("click", function () {
       this.classList.toggle("active");

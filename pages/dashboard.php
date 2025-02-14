@@ -19,10 +19,7 @@
   </head>
   <body>
     <!--------------------------------- DEBUT NAVBAR -------------------------------------------->
-    <nav
-      class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark"
-      data-bs-theme="dark"
-    >
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.php">Dark Wisdom</a>
         <button
@@ -52,7 +49,7 @@
     </nav>
     <!--------------------------------- FIN NAVBAR -------------------------------------------->
     <!---------------------------------  Section Titre  -------------------------------------------->
-<section class="profil_section">
+    <section class="profil_section">
     <div class="container cont-profil">
         <!-- Section Profil -->
         <div class="row">
@@ -81,7 +78,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="form-citation-container">
         <div class="form-citation-card">
@@ -216,32 +212,26 @@
         </div>
     </div>
 </section>
-    
-
-
     <!---------------------------------  FOOTERRR -------------------------------------------->
-
     <footer class="footer  text-light text-center py-4">
-  <div class="container">
-    <div class="row">
-      <!-- Liens vers les pages principales -->
-      <div class="col-md-6 mb-3">
-        <a href="index.html" class="footer-link">Accueil</a> |
-        <a href="citations.html" class="footer-link">Citations</a> |
-        <a href="favoris.html" class="footer-link">Favoris</a> |
-        <a href="contact.html" class="footer-link">Contact</a>
+      <div class="container">
+        <div class="row">
+          <!-- Liens vers les pages principales -->
+          <div class="col-md-6 mb-3">
+            <a href="index.html" class="footer-link">Accueil</a> |
+            <a href="citations.html" class="footer-link">Citations</a> |
+            <a href="favoris.html" class="footer-link">Favoris</a> |
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+          <!-- Liens vers Mentions Légales & Politique -->
+          <div class="col-md-6 mb-3">
+            <a href="mentions-legales.html" class="footer-link">Mentions Légales</a> |
+            <a href="politique-confidentialite.html" class="footer-link">Politique de Confidentialité</a>
+          </div>
+        </div>
+        <p class="mt-3">© 2025 Dark Wisdom. Tous droits réservés.</p>
       </div>
-      <!-- Liens vers Mentions Légales & Politique -->
-      <div class="col-md-6 mb-3">
-        <a href="mentions-legales.html" class="footer-link">Mentions Légales</a> |
-        <a href="politique-confidentialite.html" class="footer-link">Politique de Confidentialité</a>
-      </div>
-    </div>
-    <p class="mt-3">© 2025 Dark Wisdom. Tous droits réservés.</p>
-  </div>
-</footer>
-
-
+    </footer>
     <!--------------------------------- JAVASCRIPT -------------------------------------------->
     <script src="https://kit.fontawesome.com/cd8dd3426c.js" crossorigin="anonymous"></script>
     <script
@@ -253,23 +243,21 @@
     <script>
       AOS.init();
     </script>
-    <script>document.addEventListener("DOMContentLoaded", function () {
-    const favoriteButtons = document.querySelectorAll(".favorite-btn");
-
-    favoriteButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            this.classList.toggle("active");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const favoriteButtons = document.querySelectorAll(".favorite-btn");
+            favoriteButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                });
+            });
         });
-    });
-});
-
-
-// pour enlever une CITATION
-document.querySelectorAll(".remove-btn").forEach(button => {
-    button.addEventListener("click", function() {
-        this.parentElement.remove(); // Supprime la carte parente
-    });
-});
-</script>
+        // pour enlever une CITATION
+        document.querySelectorAll(".remove-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                this.parentElement.remove(); // Supprime la carte parente
+            });
+        });
+    </script>
   </body>
 </html>
