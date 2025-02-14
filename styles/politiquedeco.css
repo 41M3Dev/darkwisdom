@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: black;
+  color: #9b59b6;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+header {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2em;
+}
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+h2 {
+  color: white;
+}
+a {
+  color: #9b59b6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
