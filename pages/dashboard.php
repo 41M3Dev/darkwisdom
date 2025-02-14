@@ -237,18 +237,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!citationId) return;
 
-            // if (confirm("Voulez-vous vraiment supprimer cette citation ?")) {
-            //     fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
-            //         .then(() => {
-            //             location.reload(); // Recharge la page après suppression
-            //         })
-            //         .catch(error => console.error("Erreur :", error));
-            // }
-            fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
-                .then(() => {
-                    location.reload(); // Recharge la page après suppression
-                })
-                .catch(error => console.error("Erreur :", error));
+            if (confirm("Voulez-vous vraiment supprimer cette citation ?")) {
+                fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
+                    .then(() => {
+                        location.reload(); // Recharge la page après suppression
+                    })
+                    .catch(error => console.error("Erreur :", error));
+            }
+            // fetch("../function/supprimer_citation.php?id=" + citationId, { method: "GET" })
+            //     .then(() => {
+            //         location.reload(); // Recharge la page après suppression
+            //     })
+            //     .catch(error => console.error("Erreur :", error));
         });
     });
 });
