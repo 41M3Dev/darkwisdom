@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb" name="Changes" comment="FEAT : &#10;Fonction rajout favoris + js maj">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/citations.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/citations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/darkwisdom.sql" beforeDir="false" afterPath="$PROJECT_DIR$/darkwisdom.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/citation____dashboard__back",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "C:/xampp/htdocs/projetNeed/Dark Wisdom",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
