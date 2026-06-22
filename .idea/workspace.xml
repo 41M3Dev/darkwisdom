@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3eb3b10-6ea3-40c8-a35a-f61f06e69cbb" name="Changes" comment="FEAT : &#10;Fonction rajout favoris + js maj">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/darkwisdom.sql" beforeDir="false" afterPath="$PROJECT_DIR$/darkwisdom.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/citations.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/citations.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

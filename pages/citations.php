@@ -74,7 +74,7 @@
     <section class="citation-section">
     <div class="overlay">
         <h1 class="h1_citations" style="padding-top: 80px">Découvrez des citations inspirantes</h1>
-        <p class="p_citations">Plongez dans un monde de pensées profondes, avec des citations sur les animés, les  et bien plus encore.</p>
+        <p class="p_citations">Plongez dans un monde de pensées profondes, avec des citations sur les animés, les films, la poésie et bien plus encore.</p>
     </div>
     <video class="background-media" autoplay muted loop playsinline>
         <source src="../images/title_citation.mp4" type="video/mp4">
@@ -215,18 +215,17 @@
     <div class="row">
       <!-- Liens vers les pages principales -->
       <div class="col-md-6 mb-3">
-        <a href="index.html" class="footer-link">Accueil</a> |
-        <a href="citations.html" class="footer-link">Citations</a> |
-        <a href="favoris.html" class="footer-link">Favoris</a> |
-        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="../index.php" class="footer-link">Accueil</a> |
+        <a href="citations.php" class="footer-link">Citations</a> |
+        <a href="profil.php#favoris" class="footer-link">Favoris</a>
       </div>
       <!-- Liens vers Mentions Légales & Politique -->
       <div class="col-md-6 mb-3">
-        <a href="mentions-legales.html" class="footer-link">Mentions Légales</a> |
-        <a href="politique-confidentialite.html" class="footer-link">Politique de Confidentialité</a>
+        <a href="mentionslegales.html" class="footer-link">Mentions Légales</a> |
+        <a href="politiquedeco.html" class="footer-link">Politique de Confidentialité</a>
       </div>
     </div>
-    <p class="mt-3">© 2025 Dark Wisdom. Tous droits réservés.</p>
+    <p class="mt-3">© 2026 Dark Wisdom. Tous droits réservés.</p>
   </div>
 </footer>
     <!--------------------------------- JAVASCRIPT -------------------------------------------->

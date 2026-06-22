@@ -1,5 +1,10 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,9 +46,6 @@
                     <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/citations.php">Citations</a></li> <?php
                     // Démarrer la session si ce n'est pas déjà fait
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }
                     // Vérifier si l'utilisateur est connecté
                     if (isset($_SESSION['user_id']) && $_SESSION['roles'] == 'admin') {
                         // Si l'utilisateur est connecté
@@ -171,18 +173,17 @@
     <div class="row">
       <!-- Liens vers les pages principales -->
       <div class="col-md-6 mb-3">
-        <a href="index.html" class="footer-link">Accueil</a> |
-        <a href="citations.html" class="footer-link">Citations</a> |
-        <a href="favoris.html" class="footer-link">Favoris</a> |
-        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="index.php" class="footer-link">Accueil</a> |
+        <a href="pages/citations.php" class="footer-link">Citations</a> |
+        <a href="pages/profil.php#favoris" class="footer-link">Favoris</a>
       </div>
       <!-- Liens vers Mentions Légales & Politique -->
       <div class="col-md-6 mb-3">
-        <a href="mentions-legales.html" class="footer-link">Mentions Légales</a> |
-        <a href="politique-confidentialite.html" class="footer-link">Politique de Confidentialité</a>
+        <a href="pages/mentionslegales.html" class="footer-link">Mentions Légales</a> |
+        <a href="pages/politiquedeco.html" class="footer-link">Politique de Confidentialité</a>
       </div>
     </div>
-    <p class="mt-3">© 2025 Dark Wisdom. Tous droits réservés.</p>
+    <p class="mt-3">© 2026 Dark Wisdom. Tous droits réservés.</p>
   </div>
 </footer>
 
